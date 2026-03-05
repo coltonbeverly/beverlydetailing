@@ -12,7 +12,8 @@
 
   /* Hero Section */
   header {
-    background: url('https://images.pexels.com/photos/8416945/pexels-photo-8416945.jpeg?auto=compress&cs=tinysrgb&w=1600') no-repeat center center/cover;
+    background: url('https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&w=1600') 
+      no-repeat center center/cover;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -73,14 +74,12 @@
 </head>
 <body>
 
-<!-- Hero Section -->
 <header>
   <h1>Beverly Detailing</h1>
   <p>Professional Car Detailing & Premium Service</p>
   <button id="bookNowBtn">Book Now</button>
 </header>
 
-<!-- Services Section -->
 <section id="services">
   <h2>Our Services</h2>
   <div class="services-container">
@@ -103,7 +102,6 @@
   </div>
 </section>
 
-<!-- Footer -->
 <footer>
   &copy; 2026 Beverly Detailing. All rights reserved.
 </footer>
@@ -111,7 +109,6 @@
 <script>
   const bookNowBtn = document.getElementById('bookNowBtn');
   bookNowBtn.addEventListener('click', () => {
-    // Redirect directly to your Google Form
     window.location.href = 'https://docs.google.com/forms/d/1UfIUiCrnxfCLST8TEPVOUqGyqzCKV4B8mqCXlcXAuik/edit?pli=1';
   });
 </script>
