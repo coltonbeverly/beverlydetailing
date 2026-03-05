@@ -5,15 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Beverly Detailing</title>
 <style>
-  /* Global Styles */
+  /* === Global Styles === */
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: Arial, sans-serif; color: #333; line-height: 1.6; }
   a { text-decoration: none; color: inherit; }
 
-  /* Hero Section */
+  /* === Hero Section === */
   header {
-    background: url('https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&w=1600') 
-      no-repeat center center/cover;
+    background: url('https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&w=1600') no-repeat center center/cover;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -26,7 +25,7 @@
   header h1 { font-size: 4rem; margin-bottom: 20px; color: #ff9800; }
   header p { font-size: 1.8rem; margin-bottom: 40px; }
 
-  button#bookNowBtn {
+  button#bookNowBtn, button#bookNowSideBtn {
     background: #ff9800;
     color: white;
     border: none;
@@ -36,21 +35,31 @@
     cursor: pointer;
     transition: 0.3s;
   }
-  button#bookNowBtn:hover { background: #e68900; }
+  button#bookNowBtn:hover, button#bookNowSideBtn:hover { background: #e68900; }
 
-  /* Services Section */
+  /* === Services Section === */
   section#services {
     background: #f9f9f9;
     padding: 80px 20px;
     text-align: center;
   }
   section#services h2 { font-size: 2.5rem; margin-bottom: 40px; color: #ff9800; }
+
+  .services-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
   .services-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     gap: 30px;
+    justify-content: flex-start;
   }
+
   .service-card {
     background: white;
     padding: 30px;
@@ -70,45 +79,63 @@
     background: #333;
     color: white;
   }
+
+  /* Responsive adjustments */
+  @media(max-width: 900px) {
+    .services-wrapper { flex-direction: column; align-items: center; }
+  }
 </style>
 </head>
 <body>
 
+<!-- Hero Section -->
 <header>
   <h1>Beverly Detailing</h1>
   <p>Professional Car Detailing & Premium Service</p>
   <button id="bookNowBtn">Book Now</button>
 </header>
 
+<!-- Services Section -->
 <section id="services">
   <h2>Our Services</h2>
-  <div class="services-container">
-    <div class="service-card">
-      <h3>Exterior Wash</h3>
-      <p>Premium hand wash, tire clean and more to make your car shine like new.</p>
+  <div class="services-wrapper">
+    <div class="services-container">
+      <div class="service-card">
+        <h3>Exterior Wash</h3>
+        <p>Premium hand wash, tire clean and more to make your car shine like new.</p>
+      </div>
+      <div class="service-card">
+        <h3>Interior Detail</h3>
+        <p>Deep cleaning of carpets, seats, and all interior surfaces.</p>
+      </div>
+      <div class="service-card">
+        <h3>Full Detail</h3>
+        <p>Complete interior and exterior detailing for a showroom finish.</p>
+      </div>
+      <div class="service-card">
+        <h3>Pet Hair Removal</h3>
+        <p>Specialized cleaning to remove pet hair and odors from your vehicle.</p>
+      </div>
     </div>
-    <div class="service-card">
-      <h3>Interior Detail</h3>
-      <p>Deep cleaning of carpets, seats, and all interior surfaces.</p>
-    </div>
-    <div class="service-card">
-      <h3>Full Detail</h3>
-      <p>Complete interior and exterior detailing for a showroom finish.</p>
-    </div>
-    <div class="service-card">
-      <h3>Pet Hair Removal</h3>
-      <p>Specialized cleaning to remove pet hair and odors from your vehicle.</p>
-    </div>
+    <!-- New side button -->
+    <button id="bookNowSideBtn">Book now to see all options!</button>
   </div>
 </section>
 
+<!-- Footer -->
 <footer>
   &copy; 2026 Beverly Detailing. All rights reserved.
 </footer>
 
 <script>
   const bookNowBtn = document.getElementById('bookNowBtn');
+  const bookNowSideBtn = document.getElementById('bookNowSideBtn');
+
   bookNowBtn.addEventListener('click', () => {
+    window.location.href = 'https://docs.google.com/forms/d/1UfIUiCrnxfCLST8TEPVOUqGyqzCKV4B8mqCXlcXAuik/edit?pli=1';
+  });
+
+  bookNowSideBtn.addEventListener('click', () => {
     window.location.href = 'https://docs.google.com/forms/d/1UfIUiCrnxfCLST8TEPVOUqGyqzCKV4B8mqCXlcXAuik/edit?pli=1';
   });
 </script>
