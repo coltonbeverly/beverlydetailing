@@ -28,7 +28,7 @@
     font-size: 4.5rem; 
     margin-bottom: 20px; 
     color: #ff9800; 
-    -webkit-text-stroke: 2px black; /* Black outline for readability */
+    -webkit-text-stroke: 2px black; /* Black outline */
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
   }
   header p { 
@@ -40,7 +40,7 @@
     text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
   }
 
-  button#bookNowBtn, button#bookNowSideBtn {
+  button#bookNowBtn, button#bookNowBottomBtn {
     background: #ff9800;
     color: white;
     border: none;
@@ -50,7 +50,7 @@
     cursor: pointer;
     transition: 0.3s;
   }
-  button#bookNowBtn:hover, button#bookNowSideBtn:hover { background: #e68900; }
+  button#bookNowBtn:hover, button#bookNowBottomBtn:hover { background: #e68900; }
 
   /* === Services Section === */
   section#services {
@@ -60,19 +60,12 @@
   }
   section#services h2 { font-size: 2.5rem; margin-bottom: 40px; color: #ff9800; }
 
-  .services-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 30px;
-    flex-wrap: wrap;
-  }
-
   .services-container {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
-    justify-content: flex-start;
+    justify-content: center;
+    margin-bottom: 40px;
   }
 
   .service-card {
@@ -87,6 +80,16 @@
   .service-card h3 { margin-bottom: 15px; color: #ff9800; }
   .service-card p { font-size: 1rem; color: #555; }
 
+  /* Centered bottom button */
+  .center-button {
+    display: flex;
+    justify-content: center;
+  }
+  button#bookNowBottomBtn {
+    width: 320px; /* wider */
+    margin-top: 20px;
+  }
+
   /* Footer */
   footer {
     text-align: center;
@@ -97,7 +100,9 @@
 
   /* Responsive adjustments */
   @media(max-width: 900px) {
-    .services-wrapper { flex-direction: column; align-items: center; }
+    header h1 { font-size: 3rem; }
+    header p { font-size: 1.5rem; }
+    button#bookNowBottomBtn { width: 90%; }
   }
 </style>
 </head>
@@ -113,27 +118,27 @@
 <!-- Services Section -->
 <section id="services">
   <h2>Our Services</h2>
-  <div class="services-wrapper">
-    <div class="services-container">
-      <div class="service-card">
-        <h3>Exterior Wash</h3>
-        <p>Premium hand wash, tire clean and more to make your car shine like new.</p>
-      </div>
-      <div class="service-card">
-        <h3>Interior Detail</h3>
-        <p>Deep cleaning of carpets, seats, and all interior surfaces.</p>
-      </div>
-      <div class="service-card">
-        <h3>Full Detail</h3>
-        <p>Complete interior and exterior detailing for a showroom finish.</p>
-      </div>
-      <div class="service-card">
-        <h3>Pet Hair Removal</h3>
-        <p>Specialized cleaning to remove pet hair and odors from your vehicle.</p>
-      </div>
+  <div class="services-container">
+    <div class="service-card">
+      <h3>Exterior Wash</h3>
+      <p>Premium hand wash, tire clean and more to make your car shine like new.</p>
     </div>
-    <!-- New side button -->
-    <button id="bookNowSideBtn">Book now to see all options!</button>
+    <div class="service-card">
+      <h3>Interior Detail</h3>
+      <p>Deep cleaning of carpets, seats, and all interior surfaces.</p>
+    </div>
+    <div class="service-card">
+      <h3>Full Detail</h3>
+      <p>Complete interior and exterior detailing for a showroom finish.</p>
+    </div>
+    <div class="service-card">
+      <h3>Pet Hair Removal</h3>
+      <p>Specialized cleaning to remove pet hair and odors from your vehicle.</p>
+    </div>
+  </div>
+  <!-- Centered bottom button -->
+  <div class="center-button">
+    <button id="bookNowBottomBtn">Book now to see all options!</button>
   </div>
 </section>
 
@@ -144,13 +149,13 @@
 
 <script>
   const bookNowBtn = document.getElementById('bookNowBtn');
-  const bookNowSideBtn = document.getElementById('bookNowSideBtn');
+  const bookNowBottomBtn = document.getElementById('bookNowBottomBtn');
 
   bookNowBtn.addEventListener('click', () => {
     window.location.href = 'https://docs.google.com/forms/d/1UfIUiCrnxfCLST8TEPVOUqGyqzCKV4B8mqCXlcXAuik/edit?pli=1';
   });
 
-  bookNowSideBtn.addEventListener('click', () => {
+  bookNowBottomBtn.addEventListener('click', () => {
     window.location.href = 'https://docs.google.com/forms/d/1UfIUiCrnxfCLST8TEPVOUqGyqzCKV4B8mqCXlcXAuik/edit?pli=1';
   });
 </script>
