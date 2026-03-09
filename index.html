@@ -1,489 +1,491 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Beverly Detailing</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beverly Detailing</title>
 
-<style>
-/* === Global Styles === */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-body {
-  font-family: Arial, sans-serif;
-  color: #333;
-  line-height: 1.6;
-}
+    body {
+      font-family: Arial, sans-serif;
+      color: #333;
+      line-height: 1.6;
+    }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
-/* === Hero Section === */
-header {
-  background: url('https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&w=1600') no-repeat center center/cover;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: white;
-  text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
-}
+    header {
+      background: url('https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&w=1600') no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+      padding: 20px;
+    }
 
-header h1 {
-  font-size: 4.5rem;
-  margin-bottom: 20px;
-  color: #ff9800;
-  -webkit-text-stroke: 2px black;
-}
+    header h1 {
+      font-size: 4.5rem;
+      margin-bottom: 20px;
+      color: #ff9800;
+      -webkit-text-stroke: 2px black;
+    }
 
-header p {
-  font-size: 2rem;
-  margin-bottom: 40px;
-  font-weight: bold;
-  -webkit-text-stroke: 1px black;
-}
+    header p {
+      font-size: 2rem;
+      margin-bottom: 40px;
+      font-weight: bold;
+      -webkit-text-stroke: 1px black;
+    }
 
-button#bookNowBtn,
-button#bookNowBottomBtn {
-  background: #ff9800;
-  color: white;
-  border: none;
-  padding: 15px 40px;
-  font-size: 1.3rem;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.3s;
-}
+    button {
+      background: #ff9800;
+      color: white;
+      border: none;
+      padding: 15px 40px;
+      font-size: 1.3rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
 
-button:hover {
-  background: #e68900;
-}
+    button:hover {
+      background: #e68900;
+    }
 
-/* === Services Section === */
-#services {
-  background: #f9f9f9;
-  padding: 80px 20px;
-  text-align: center;
-}
+    #services {
+      background: #f9f9f9;
+      padding: 80px 20px;
+      text-align: center;
+    }
 
-#services h2 {
-  font-size: 2.5rem;
-  margin-bottom: 40px;
-  color: #ff9800;
-}
+    #services h2 {
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+      color: #ff9800;
+    }
 
-.services-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  justify-content: center;
-  margin-bottom: 20px;
-}
+    .services-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
 
-.service-card {
-  background: white;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  width: 250px;
-  transition: transform 0.3s;
-}
+    .service-card {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      width: 250px;
+      transition: transform 0.3s;
+    }
 
-.service-card:hover {
-  transform: translateY(-5px);
-}
+    .service-card:hover {
+      transform: translateY(-5px);
+    }
 
-.service-card h3 {
-  margin-bottom: 15px;
-  color: #ff9800;
-}
+    .service-card h3 {
+      margin-bottom: 15px;
+      color: #ff9800;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+    }
 
-.service-card p {
-  font-size: 1rem;
-  color: #555;
-}
+    .service-price {
+      font-size: 1rem;
+      color: #333;
+      font-weight: bold;
+      white-space: nowrap;
+    }
 
-.center-button {
-  display: flex;
-  justify-content: center;
-}
+    .service-card p {
+      font-size: 1rem;
+      color: #555;
+    }
 
-#bookNowBottomBtn {
-  width: 320px;
-  margin-top: 20px;
-}
+    .center-button {
+      display: flex;
+      justify-content: center;
+    }
 
-/* === Results Section === */
-.results {
-  padding: 80px 20px;
-  background: #f5f5f5;
-  text-align: center;
-}
+    #bookNowBottomBtn {
+      width: 320px;
+      margin-top: 20px;
+    }
 
-.results h2 {
-  font-size: 2.5rem;
-  color: #ff9800;
-  margin-bottom: 40px;
-}
+    .results {
+      padding: 80px 20px;
+      background: #f5f5f5;
+      text-align: center;
+    }
 
-.result-row {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 0;
-}
+    .results h2 {
+      font-size: 2.5rem;
+      color: #ff9800;
+      margin-bottom: 15px;
+    }
 
-.result {
-  flex: 1;
-  min-width: 350px;
-  padding: 0 20px;
-}
+    .results-note {
+      margin-bottom: 35px;
+      color: #555;
+      font-size: 1rem;
+    }
 
-.result:not(:last-child) {
-  border-right: 2px solid #d6d6d6;
-}
+    .result-row {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 0;
+    }
 
-.result h3 {
-  margin-bottom: 10px;
-  font-size: 1.5rem;
-}
+    .result {
+      flex: 1;
+      min-width: 350px;
+      padding: 0 20px;
+    }
 
-.before-after {
-  display: flex;
-  gap: 16px;
-  justify-content: center;
-}
+    .result:not(:last-child) {
+      border-right: 2px solid #d6d6d6;
+    }
 
-.before-after div {
-  flex: 1;
-  text-align: center;
-}
+    .result h3 {
+      margin-bottom: 10px;
+      font-size: 1.5rem;
+    }
 
-.before-after p {
-  font-weight: bold;
-  margin-bottom: 8px;
-}
+    .before-after {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+    }
 
-.before-after img {
-  width: 100%;
-  max-width: 260px;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  transition: transform 0.25s ease;
-  cursor: pointer;
-}
+    .before-after div {
+      flex: 1;
+      text-align: center;
+    }
 
-.before-after img:hover {
-  transform: scale(1.03);
-}
+    .before-after p {
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
 
-/* === Viewer / Lightbox === */
-.viewer {
-  display: none;
-  position: fixed;
-  z-index: 9999;
-  inset: 0;
-  background: rgba(0,0,0,0.9);
-  justify-content: center;
-  align-items: center;
-}
+    .before-after img {
+      width: 100%;
+      max-width: 260px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      transition: transform 0.25s ease;
+      cursor: pointer;
+    }
 
-.viewer-content {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-}
+    .before-after img:hover {
+      transform: scale(1.03);
+    }
 
-.viewer img {
-  max-width: 92%;
-  max-height: 88vh;
-  border-radius: 12px;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.45);
-}
+    .viewer {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      inset: 0;
+      background: rgba(0,0,0,0.9);
+      justify-content: center;
+      align-items: center;
+    }
 
-.close {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  color: white;
-  font-size: 46px;
-  cursor: pointer;
-  z-index: 10001;
-  line-height: 1;
-}
+    .viewer-content {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      padding: 20px 70px;
+    }
 
-.nav {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  color: white;
-  font-size: 56px;
-  cursor: pointer;
-  padding: 16px 20px;
-  user-select: none;
-  z-index: 10001;
-  background: rgba(0,0,0,0.2);
-  border-radius: 10px;
-}
+    .viewer img {
+      max-width: 92%;
+      max-height: 88vh;
+      border-radius: 12px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.45);
+    }
 
-.nav:hover {
-  background: rgba(255,255,255,0.12);
-}
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      color: white;
+      font-size: 46px;
+      cursor: pointer;
+      z-index: 10001;
+      line-height: 1;
+    }
 
-.left {
-  left: 20px;
-}
+    .nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      color: white;
+      font-size: 56px;
+      cursor: pointer;
+      padding: 16px 20px;
+      user-select: none;
+      z-index: 10001;
+      background: rgba(0,0,0,0.2);
+      border-radius: 10px;
+    }
 
-.right {
-  right: 20px;
-}
+    .nav:hover {
+      background: rgba(255,255,255,0.12);
+    }
 
-/* === Footer === */
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #333;
-  color: white;
-}
+    .left {
+      left: 20px;
+    }
 
-/* === Mobile === */
-@media (max-width: 900px) {
-  header h1 {
-    font-size: 3rem;
-  }
+    .right {
+      right: 20px;
+    }
 
-  header p {
-    font-size: 1.5rem;
-  }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #333;
+      color: white;
+    }
 
-  .result-row {
-    flex-direction: column;
-  }
+    @media (max-width: 900px) {
+      header h1 {
+        font-size: 3rem;
+      }
 
-  .result:not(:last-child) {
-    border-right: none;
-    border-bottom: 2px solid #d6d6d6;
-    padding-bottom: 30px;
-    margin-bottom: 30px;
-  }
+      header p {
+        font-size: 1.5rem;
+      }
 
-  .before-after img {
-    max-width: 100%;
-  }
+      #bookNowBottomBtn {
+        width: 90%;
+      }
 
-  .nav {
-    font-size: 42px;
-    padding: 12px 14px;
-  }
+      .result-row {
+        flex-direction: column;
+      }
 
-  .left {
-    left: 8px;
-  }
+      .result:not(:last-child) {
+        border-right: none;
+        border-bottom: 2px solid #d6d6d6;
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+      }
 
-  .right {
-    right: 8px;
-  }
+      .before-after img {
+        max-width: 100%;
+      }
 
-  .close {
-    top: 12px;
-    right: 18px;
-    font-size: 40px;
-  }
-}
-</style>
+      .nav {
+        font-size: 42px;
+        padding: 12px 14px;
+      }
+
+      .left {
+        left: 8px;
+      }
+
+      .right {
+        right: 8px;
+      }
+
+      .close {
+        top: 12px;
+        right: 18px;
+        font-size: 40px;
+      }
+
+      .viewer-content {
+        padding: 20px 50px;
+      }
+    }
+  </style>
 </head>
-
 <body>
 
-<!-- Hero Section -->
-<header>
-  <h1>Beverly Detailing</h1>
-  <p>Professional Mobile Car Detailing Service</p>
-  <button id="bookNowBtn">Book Now</button>
-</header>
+  <header>
+    <h1>Beverly Detailing</h1>
+    <p>Professional Mobile Car Detailing Service</p>
+    <button id="bookNowBtn">Book Now</button>
+  </header>
 
-<!-- Services -->
-<section id="services">
-  <h2>Our Services</h2>
+  <section id="services">
+    <h2>Our Services</h2>
 
-  <div class="services-container">
-    <div class="service-card">
-      <h3>Exterior Wash</h3>
-      <p>Premium hand wash, tire clean and more to make your car shine like new.</p>
-    </div>
+    <div class="services-container">
+      <div class="service-card">
+        <h3>Exterior Wash <span class="service-price">$35</span></h3>
+        <p>Premium hand wash, tire clean and more to make your car shine like new.</p>
+      </div>
 
-    <div class="service-card">
-      <h3>Interior Detail</h3>
-      <p>Deep cleaning of carpets, seats, and all interior surfaces.</p>
-    </div>
+      <div class="service-card">
+        <h3>Interior Detail <span class="service-price">$45</span></h3>
+        <p>Deep cleaning of carpets, seats, and all interior surfaces.</p>
+      </div>
 
-    <div class="service-card">
-      <h3>Full Detail</h3>
-      <p>Complete interior and exterior detailing for a showroom finish.</p>
-    </div>
+      <div class="service-card">
+        <h3>Full Detail <span class="service-price">$75</span></h3>
+        <p>Complete interior and exterior detailing for a showroom finish.</p>
+      </div>
 
-    <div class="service-card">
-      <h3>Pet Hair Removal</h3>
-      <p>Specialized cleaning to remove pet hair and odors from your vehicle.</p>
-    </div>
-  </div>
-
-  <div class="center-button">
-    <button id="bookNowBottomBtn">Book now to see all options!</button>
-  </div>
-</section>
-
-<!-- Results -->
-<section class="results">
-  <h2>Real Results</h2>
-
-  <div class="result-row">
-    <div class="result">
-      <h3>Floor Mats</h3>
-      <div class="before-after">
-        <div>
-          <p>Before</p>
-          <a href="#" onclick="openGallery(0); return false;">
-            <img src="dirtyfloor.jpeg" alt="Dirty floor mat">
-          </a>
-        </div>
-        <div>
-          <p>After</p>
-          <a href="#" onclick="openGallery(1); return false;">
-            <img src="cleanfloor.png" alt="Clean floor mat">
-          </a>
-        </div>
+      <div class="service-card">
+        <h3>Pet Hair Removal <span class="service-price">$25</span></h3>
+        <p>Specialized cleaning to remove pet hair and odors from your vehicle.</p>
       </div>
     </div>
 
-    <div class="result">
-      <h3>Wheels</h3>
-      <div class="before-after">
-        <div>
-          <p>Before</p>
-          <a href="#" onclick="openGallery(2); return false;">
-            <img src="dirtywheel.png" alt="Dirty wheel">
-          </a>
+    <div class="center-button">
+      <button id="bookNowBottomBtn">Book now to see all options!</button>
+    </div>
+  </section>
+
+  <section class="results">
+    <h2>Real Results</h2>
+    <p class="results-note">Click any photo to enlarge</p>
+
+    <div class="result-row">
+      <div class="result">
+        <h3>Floor Mats</h3>
+        <div class="before-after">
+          <div>
+            <p>Before</p>
+            <img src="dirtyfloor.jpeg" alt="Dirty floor mat" onclick="openGallery(0)">
+          </div>
+          <div>
+            <p>After</p>
+            <img src="cleanfloor.png" alt="Clean floor mat" onclick="openGallery(1)">
+          </div>
         </div>
-        <div>
-          <p>After</p>
-          <a href="#" onclick="openGallery(3); return false;">
-            <img src="cleanwheel.png" alt="Clean wheel">
-          </a>
+      </div>
+
+      <div class="result">
+        <h3>Wheels</h3>
+        <div class="before-after">
+          <div>
+            <p>Before</p>
+            <img src="dirtywheel.png" alt="Dirty wheel" onclick="openGallery(2)">
+          </div>
+          <div>
+            <p>After</p>
+            <img src="cleanwheel.png" alt="Clean wheel" onclick="openGallery(3)">
+          </div>
+        </div>
+      </div>
+
+      <div class="result">
+        <h3>Exterior</h3>
+        <div class="before-after">
+          <div>
+            <p>Before</p>
+            <img src="dirtyrear.jpeg" alt="Dirty rear" onclick="openGallery(4)">
+          </div>
+          <div>
+            <p>After</p>
+            <img src="cleanrear.jpeg" alt="Clean rear" onclick="openGallery(5)">
+          </div>
         </div>
       </div>
     </div>
+  </section>
 
-    <div class="result">
-      <h3>Exterior</h3>
-      <div class="before-after">
-        <div>
-          <p>Before</p>
-          <a href="#" onclick="openGallery(4); return false;">
-            <img src="dirtyrear.jpeg" alt="Dirty rear">
-          </a>
-        </div>
-        <div>
-          <p>After</p>
-          <a href="#" onclick="openGallery(5); return false;">
-            <img src="cleanrear.jpeg" alt="Clean rear">
-          </a>
-        </div>
-      </div>
+  <div id="galleryViewer" class="viewer" onclick="closeGallery(event)">
+    <div class="viewer-content" onclick="event.stopPropagation()">
+      <span class="close" onclick="closeGallery(event)">&times;</span>
+      <span class="nav left" onclick="changeImage(-1, event)">❮</span>
+      <img id="viewerImage" src="" alt="Expanded detailing result">
+      <span class="nav right" onclick="changeImage(1, event)">❯</span>
     </div>
   </div>
-</section>
 
-<!-- Gallery Viewer -->
-<div id="galleryViewer" class="viewer" onclick="closeGallery(event)">
-  <div class="viewer-content" onclick="event.stopPropagation()">
-    <span class="close" onclick="closeGallery(event)">&times;</span>
-    <span class="nav left" onclick="changeImage(-1, event)">❮</span>
-    <img id="viewerImage" src="" alt="Expanded detailing result">
-    <span class="nav right" onclick="changeImage(1, event)">❯</span>
-  </div>
-</div>
+  <footer>
+    © 2026 Beverly Detailing. All rights reserved.
+  </footer>
 
-<!-- Footer -->
-<footer>
-  © 2026 Beverly Detailing. All rights reserved.
-</footer>
+  <script>
+    const formLink = 'https://docs.google.com/forms/d/1UfIUiCrnxfCLST8TEPVOUqGyqzCKV4B8mqCXlcXAuik/edit?pli=1';
 
-<script>
-const formLink = 'https://docs.google.com/forms/d/1UfIUiCrnxfCLST8TEPVOUqGyqzCKV4B8mqCXlcXAuik/edit?pli=1';
+    document.getElementById('bookNowBtn').addEventListener('click', () => {
+      window.location.href = formLink;
+    });
 
-document.getElementById('bookNowBtn').addEventListener('click', () => {
-  window.location.href = formLink;
-});
+    document.getElementById('bookNowBottomBtn').addEventListener('click', () => {
+      window.location.href = formLink;
+    });
 
-document.getElementById('bookNowBottomBtn').addEventListener('click', () => {
-  window.location.href = formLink;
-});
+    const galleryImages = [
+      'dirtyfloor.jpeg',
+      'cleanfloor.png',
+      'dirtywheel.png',
+      'cleanwheel.png',
+      'dirtyrear.jpeg',
+      'cleanrear.jpeg'
+    ];
 
-const galleryImages = [
-  'dirtyfloor.jpeg',
-  'cleanfloor.png',
-  'dirtywheel.png',
-  'cleanwheel.png',
-  'dirtyrear.jpeg',
-  'cleanrear.jpeg'
-];
+    let currentImage = 0;
 
-let currentImage = 0;
+    function openGallery(index) {
+      currentImage = index;
+      document.getElementById('viewerImage').src = galleryImages[currentImage];
+      document.getElementById('galleryViewer').style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
 
-function openGallery(index) {
-  currentImage = index;
-  document.getElementById('viewerImage').src = galleryImages[currentImage];
-  document.getElementById('galleryViewer').style.display = 'flex';
-  document.body.style.overflow = 'hidden';
-}
+    function closeGallery(event) {
+      if (event) event.stopPropagation();
+      document.getElementById('galleryViewer').style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
 
-function closeGallery(event) {
-  if (event) event.stopPropagation();
-  document.getElementById('galleryViewer').style.display = 'none';
-  document.body.style.overflow = 'auto';
-}
+    function changeImage(direction, event) {
+      if (event) event.stopPropagation();
 
-function changeImage(direction, event) {
-  if (event) event.stopPropagation();
+      currentImage += direction;
 
-  currentImage += direction;
+      if (currentImage < 0) {
+        currentImage = galleryImages.length - 1;
+      }
 
-  if (currentImage < 0) {
-    currentImage = galleryImages.length - 1;
-  }
+      if (currentImage >= galleryImages.length) {
+        currentImage = 0;
+      }
 
-  if (currentImage >= galleryImages.length) {
-    currentImage = 0;
-  }
+      document.getElementById('viewerImage').src = galleryImages[currentImage];
+    }
 
-  document.getElementById('viewerImage').src = galleryImages[currentImage];
-}
+    document.addEventListener('keydown', function(event) {
+      const viewer = document.getElementById('galleryViewer');
+      if (viewer.style.display !== 'flex') return;
 
-document.addEventListener('keydown', function(event) {
-  const viewer = document.getElementById('galleryViewer');
-  if (viewer.style.display !== 'flex') return;
-
-  if (event.key === 'ArrowLeft') {
-    changeImage(-1);
-  } else if (event.key === 'ArrowRight') {
-    changeImage(1);
-  } else if (event.key === 'Escape') {
-    closeGallery();
-  }
-});
-</script>
+      if (event.key === 'ArrowLeft') {
+        changeImage(-1);
+      } else if (event.key === 'ArrowRight') {
+        changeImage(1);
+      } else if (event.key === 'Escape') {
+        closeGallery();
+      }
+    });
+  </script>
 
 </body>
 </html>
