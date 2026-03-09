@@ -221,53 +221,104 @@
   </section>
 
   <!-- Real Results Section -->
-  <section class="results">
-    <h2>Real Results</h2>
+/* === Results Section === */
+.results {
+  padding: 80px 20px;
+  background: #f5f5f5;
+  text-align: center;
+}
 
-    <div class="result-row">
-      <div class="result">
-        <h3>Floor Mats</h3>
-        <div class="before-after">
-          <div>
-            <p>Before</p>
-            <img src="dirtyfloor.jpeg" alt="Dirty floor mat">
-          </div>
-          <div>
-            <p>After</p>
-            <img src="cleanfloor.png" alt="Clean floor mat">
-          </div>
-        </div>
-      </div>
+.results h2 {
+  font-size: 2.5rem;
+  color: #ff9800;
+  margin-bottom: 40px;
+}
 
-      <div class="result">
-        <h3>Wheels</h3>
-        <div class="before-after">
-          <div>
-            <p>Before</p>
-            <img src="dirtywheel.png" alt="Dirty wheel">
-          </div>
-          <div>
-            <p>After</p>
-            <img src="cleanwheel.png" alt="Clean wheel">
-          </div>
-        </div>
-      </div>
+.result-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
 
-      <div class="result">
-        <h3>Exterior</h3>
-        <div class="before-after">
-          <div>
-            <p>Before</p>
-            <img src="dirtyrear.jpeg" alt="Dirty rear">
-          </div>
-          <div>
-            <p>After</p>
-            <img src="cleanrear.jpeg" alt="Clean rear">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+.result {
+  flex: 0 0 auto;
+  width: 32%;
+  min-width: 420px;
+  padding: 0 20px;
+}
+
+.result:not(:last-child) {
+  border-right: 2px solid #d6d6d6;
+}
+
+.result h3 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.before-after {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+}
+
+.before-after > div {
+  flex: 1;
+  text-align: center;
+}
+
+.before-after p {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.before-after img {
+  width: 100%;
+  max-width: 220px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Responsive */
+@media (max-width: 1400px) {
+  .result-row {
+    justify-content: flex-start;
+    padding-bottom: 10px;
+  }
+}
+
+@media (max-width: 900px) {
+  header h1 { font-size: 3rem; }
+  header p { font-size: 1.5rem; }
+  button#bookNowBottomBtn { width: 90%; }
+
+  .result-row {
+    flex-direction: column;
+    align-items: center;
+    overflow-x: visible;
+  }
+
+  .result {
+    width: 100%;
+    min-width: 0;
+    max-width: 700px;
+    padding: 0;
+  }
+
+  .result:not(:last-child) {
+    border-right: none;
+    border-bottom: 2px solid #d6d6d6;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+  }
+
+  .before-after img {
+    max-width: 100%;
+  }
+}
 
   <!-- Footer -->
   <footer>
